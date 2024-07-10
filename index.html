@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agenda de Citas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Agenda de Citas</h1>
+
+    <div class="week-navigation">
+        <button id="prevWeek">← Semana Anterior</button>
+        <div id="weekDates">
+            <span id="weekStartDate"></span> - <span id="weekEndDate"></span>
+            <div id="currentWeek"></div>
+        </div>
+        <button id="nextWeek">Semana Siguiente →</button>
+    </div>
+
+    <div id="schedule"></div>
+
+    <div id="modal">
+        <div id="modal-content">
+            <span class="close">&times;</span>
+            <h2></h2>
+            <form id="appointmentForm">
+                <label for="patientName">Nombre del Paciente:</label>
+                <input type="text" id="patientName" required><br><br>
+                <label for="appointmentDate">Fecha:</label>
+                <input type="date" id="appointmentDate" required><br><br>
+                <label for="appointmentTime">Hora:</label>
+                <input type="time" id="appointmentTime" required><br><br>
+                <button type="submit">Guardar Cita</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

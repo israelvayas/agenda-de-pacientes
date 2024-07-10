@@ -1,0 +1,176 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 20px;
+    color: #333;
+}
+
+.week-navigation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+    width: 100%;
+}
+
+.week-navigation button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 0 10px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 4px;
+}
+
+.week-navigation button:hover {
+    background-color: #0056b3;
+}
+
+#weekDates {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#currentWeek {
+    margin-top: 5px;
+    font-size: 18px; /* Aumentado el tamaño de la letra */
+    color: #555;
+    text-align: center; /* Centra el texto horizontalmente */
+}
+
+#schedule {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table th, table td {
+    border: 2px solid black; /* Líneas divisorias negras y más gruesas */
+    padding: 10px;
+    text-align: center;
+}
+
+table th {
+    background-color: #f2f2f2;
+    position: sticky;
+    top: 0;
+    z-index: 2; /* Asegura que esté por encima del contenido */
+}
+
+/* Estilo para la fila de los días */
+.days-header {
+    position: sticky;
+    top: 0;
+    background-color: #f2f2f2;
+    z-index: 1;
+}
+
+table td.available {
+    cursor: pointer;
+    background-color: #ffffff; /* Fondo blanco para celdas disponibles */
+}
+
+table td.booked {
+    background-color: #cceeff; /* Azul suave para celdas agendadas */
+    color: #333;
+    font-weight: bold;
+    position: relative;
+}
+
+table td.booked div {
+    margin-bottom: 5px;
+}
+
+table td button {
+    margin-top: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+}
+
+table td .edit {
+    background-color: #007bff;
+    color: white;
+    font-size: 14px;
+}
+
+table td .delete {
+    background-color: #ff0000;
+    color: white;
+    font-size: 14px;
+}
+
+table td .add-patient {
+    background-color: #28a745;
+    color: white;
+    font-size: 14px;
+}
+
+#modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+}
+
+#modal-content {
+    background-color: #fefefe;
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 600px;
+    position: relative;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#appointmentForm {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+#appointmentForm label {
+    margin-top: 10px;
+}
+
+#appointmentForm input, #appointmentForm button {
+    margin-top: 5px;
+}
